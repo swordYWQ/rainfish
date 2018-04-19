@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://swordYWQ.github.com/"/>
-  <updated>2017-12-18T06:58:39.590Z</updated>
+  <updated>2017-12-18T06:58:39.591Z</updated>
   <id>https://swordYWQ.github.com/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://swordYWQ.github.com/2018/03/06/vue-keepalive/"/>
     <id>https://swordYWQ.github.com/2018/03/06/vue-keepalive/</id>
     <published>2018-03-06T06:26:19.166Z</published>
-    <updated>2017-12-18T06:58:39.590Z</updated>
+    <updated>2017-12-18T06:58:39.591Z</updated>
     
     <content type="html"><![CDATA[<p>在web项目中我们经常使用各种缓存在达到提高访问速度的效果，那么，在vue项目中如何使用组件缓存呢。</p><h2 id="keep-alive"><a href="#keep-alive" class="headerlink" title="keep-alive"></a>keep-alive</h2><p>keep-alive 是vue官方提供的缓存组件。它是一个抽象组件，在页面中使用keep-alive组件缓存,能有效提高页面响应速度，组件被卸载后不会被destroy掉，而是变成不活跃状态存在内存中，当再次访问组件时直接从内存中获取缓存渲染，而不是重新请求。</p><h3 id="场景"><a href="#场景" class="headerlink" title="场景"></a>场景</h3><p>一般使用keep-alive的场景为router-view路由组件或者component动态组件。</p><h3 id="使用方式"><a href="#使用方式" class="headerlink" title="使用方式"></a>使用方式</h3><p>1 只用单独的keep-alive包裹的话，会缓存router-view 渲染的所有组件<br>2 使用include绑定一个数组，只会缓存数组中name相同的组件<br>3 使用exclude绑定一个数组，会缓存除了数组中name相同的其他所有渲染的组件</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;keep-alive :include=<span class="string">"cachePages"</span> :exclude=<span class="string">"excludePages"</span>&gt;</span><br><span class="line">  &lt;router-view&gt;&lt;/router-view&gt;</span><br><span class="line">&lt;/keep-alive&gt;</span><br></pre></td></tr></table></figure><h3 id="缺陷"><a href="#缺陷" class="headerlink" title="缺陷"></a>缺陷</h3><p>能够实现打开后的组件进行缓存，但关闭标签页后，重新打开组件，组件仍是缓存后的组件，无法实现从内存中移除已缓存的组件。</p>]]></content>
     
@@ -50,8 +50,8 @@
     <title>Hello World</title>
     <link href="https://swordYWQ.github.com/2018/03/06/hello-world/"/>
     <id>https://swordYWQ.github.com/2018/03/06/hello-world/</id>
-    <published>2018-03-06T01:39:03.922Z</published>
-    <updated>2018-03-06T01:39:03.922Z</updated>
+    <published>2018-03-06T01:39:03.923Z</published>
+    <updated>2018-03-06T01:39:03.923Z</updated>
     
     <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
     
