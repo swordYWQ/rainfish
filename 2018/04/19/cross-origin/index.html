@@ -21,16 +21,16 @@
     
     
     <meta name="keywords" content="">
-    <meta name="description" content="什么是跨域跨域是指一个域下的文档或脚本试图去请求另一个域下的资源。 如何跨域在项目开发中，时常遇见浏览器接口请求需要跨域访问的情况，此时，我们该如何访问呢？ 下面是几种常用的跨域解决方案:  通过JSONP跨域  接口通过jsonp格式请求，请求中需带上callback字段，传递回调方法名，服务端返回结果需要以回调参数的形式返回。 在页面上我们可以引入不同域上的js脚本文件，但是无法通过ajax访">
+    <meta name="description" content="什么是跨域跨域是指一个域下的文档或脚本试图去请求另一个域下的资源。 如何跨域在项目开发中，时常遇见浏览器接口请求需要跨域访问的情况，此时，我们该如何访问呢？ 下面是几种常用的跨域解决方案: 通过JSONP跨域接口通过jsonp格式请求，请求中需带上callback字段，传递回调方法名，服务端返回结果需要以回调参数的形式返回。 在页面上我们可以引入不同域上的js脚本文件，但是无法通过ajax访问接口">
 <meta property="og:type" content="article">
 <meta property="og:title" content="常用的跨域解决方案">
 <meta property="og:url" content="https://swordYWQ.github.com/2018/04/19/cross-origin/index.html">
 <meta property="og:site_name" content="雨中的YU">
-<meta property="og:description" content="什么是跨域跨域是指一个域下的文档或脚本试图去请求另一个域下的资源。 如何跨域在项目开发中，时常遇见浏览器接口请求需要跨域访问的情况，此时，我们该如何访问呢？ 下面是几种常用的跨域解决方案:  通过JSONP跨域  接口通过jsonp格式请求，请求中需带上callback字段，传递回调方法名，服务端返回结果需要以回调参数的形式返回。 在页面上我们可以引入不同域上的js脚本文件，但是无法通过ajax访">
-<meta property="og:updated_time" content="2018-04-19T10:08:51.548Z">
+<meta property="og:description" content="什么是跨域跨域是指一个域下的文档或脚本试图去请求另一个域下的资源。 如何跨域在项目开发中，时常遇见浏览器接口请求需要跨域访问的情况，此时，我们该如何访问呢？ 下面是几种常用的跨域解决方案: 通过JSONP跨域接口通过jsonp格式请求，请求中需带上callback字段，传递回调方法名，服务端返回结果需要以回调参数的形式返回。 在页面上我们可以引入不同域上的js脚本文件，但是无法通过ajax访问接口">
+<meta property="og:updated_time" content="2018-04-19T10:14:34.391Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="常用的跨域解决方案">
-<meta name="twitter:description" content="什么是跨域跨域是指一个域下的文档或脚本试图去请求另一个域下的资源。 如何跨域在项目开发中，时常遇见浏览器接口请求需要跨域访问的情况，此时，我们该如何访问呢？ 下面是几种常用的跨域解决方案:  通过JSONP跨域  接口通过jsonp格式请求，请求中需带上callback字段，传递回调方法名，服务端返回结果需要以回调参数的形式返回。 在页面上我们可以引入不同域上的js脚本文件，但是无法通过ajax访">
+<meta name="twitter:description" content="什么是跨域跨域是指一个域下的文档或脚本试图去请求另一个域下的资源。 如何跨域在项目开发中，时常遇见浏览器接口请求需要跨域访问的情况，此时，我们该如何访问呢？ 下面是几种常用的跨域解决方案: 通过JSONP跨域接口通过jsonp格式请求，请求中需带上callback字段，传递回调方法名，服务端返回结果需要以回调参数的形式返回。 在页面上我们可以引入不同域上的js脚本文件，但是无法通过ajax访问接口">
     
         <link rel="alternate" type="application/atom+xml" title="雨中的YU" href="/atom.xml">
     
@@ -117,7 +117,7 @@
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
                 <i class="icon icon-lg icon-chevron-left"></i>
             </a>
-            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="検索">
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
                 <i class="icon icon-lg icon-search"></i>
             </a>
@@ -156,7 +156,7 @@
     <aside class="post-widget">
         <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
             <h4>TOC</h4>
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#什么是跨域"><span class="post-toc-number">1.</span> <span class="post-toc-text">什么是跨域</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#如何跨域"><span class="post-toc-number">2.</span> <span class="post-toc-text">如何跨域</span></a></li></ol>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#什么是跨域"><span class="post-toc-number">1.</span> <span class="post-toc-text">什么是跨域</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#如何跨域"><span class="post-toc-number">2.</span> <span class="post-toc-text">如何跨域</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#通过JSONP跨域"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">通过JSONP跨域</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#服务端设置响应头"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">服务端设置响应头</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#代理服务器"><span class="post-toc-number">2.3.</span> <span class="post-toc-text">代理服务器</span></a></li></ol></li></ol>
         </nav>
     </aside>
 
@@ -183,25 +183,16 @@
             <h1 id="什么是跨域"><a href="#什么是跨域" class="headerlink" title="什么是跨域"></a>什么是跨域</h1><p>跨域是指一个域下的文档或脚本试图去请求另一个域下的资源。</p>
 <h1 id="如何跨域"><a href="#如何跨域" class="headerlink" title="如何跨域"></a>如何跨域</h1><p>在项目开发中，时常遇见浏览器接口请求需要跨域访问的情况，此时，我们该如何访问呢？</p>
 <p>下面是几种常用的跨域解决方案:</p>
-<ol>
-<li>通过JSONP跨域</li>
-</ol>
-<p>接口通过jsonp格式请求，请求中需带上callback字段，传递回调方法名，服务端返回结果需要以回调参数的形式返回。</p>
+<h2 id="通过JSONP跨域"><a href="#通过JSONP跨域" class="headerlink" title="通过JSONP跨域"></a>通过JSONP跨域</h2><p>接口通过jsonp格式请求，请求中需带上callback字段，传递回调方法名，服务端返回结果需要以回调参数的形式返回。</p>
 <p>在页面上我们可以引入不同域上的js脚本文件，但是无法通过ajax访问接口，jsonp的原理是通过一个js脚本回调达到跨域请求的效果。</p>
-<ol>
-<li>服务端设置响应头</li>
-</ol>
-<p>服务端设置Access-Control-Allow-Origin响应头为 *，表示允许所有请求跨域访问，也可以设置为具体域名或IP，达到允许制定地址访问。</p>
+<h2 id="服务端设置响应头"><a href="#服务端设置响应头" class="headerlink" title="服务端设置响应头"></a>服务端设置响应头</h2><p>服务端设置Access-Control-Allow-Origin响应头为 *，表示允许所有请求跨域访问，也可以设置为具体域名或IP，达到允许制定地址访问。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">response.setHeader(&quot;Access-Control-Allow-Origin&quot;, &quot;*&quot;);</span><br></pre></td></tr></table></figure>
 <p>此时需要加上前端header头 ‘Content-Type’: ‘application/x-www-form-urlencoded’</p>
 <p>如果跨域请求需要携带cookie信息:</p>
 <p>此时服务端需要设置响应头</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">response.setHeader(&quot;Access-Control-Allow-Credentials&quot;, &quot;true&quot;);</span><br><span class="line">response.setHeader(&quot;Access-Control-Allow-Origin&quot;, request.getHeader(&quot;Origin&quot;));</span><br></pre></td></tr></table></figure>
 <p>而前端代码ajax请求需要加上withCredentials = true属性，允许携带cookie，</p>
-<ol>
-<li>代理服务器</li>
-</ol>
-<p>如果是前后端分离的项目，前端开发阶段可以通过webpack或者gulp构建本地服务器并设置转发。</p>
+<h2 id="代理服务器"><a href="#代理服务器" class="headerlink" title="代理服务器"></a>代理服务器</h2><p>如果是前后端分离的项目，前端开发阶段可以通过webpack或者gulp构建本地服务器并设置转发。</p>
 <p>如webpack配置</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">devServer: &#123;</span><br><span class="line">     historyApiFallback: true,</span><br><span class="line">     noInfo: true,</span><br><span class="line">     proxy: &#123;</span><br><span class="line">         &apos;/menu&apos;: &#123;</span><br><span class="line">             target: &apos;https://other-server.example.com&apos;,</span><br><span class="line">             secure: false</span><br><span class="line">         &#125;</span><br><span class="line">     &#125;</span><br></pre></td></tr></table></figure>
 <p>也可以手写一个node express代理转发,代码如下</p>
@@ -218,7 +209,7 @@
     <div class="content">
         
 <span class="post-time">
-    最終更新：<time datetime="2018-04-19T10:08:51.548Z" itemprop="dateUpdated">2018-04-19 18:08:51</time>
+    Last updated: <time datetime="2018-04-19T10:14:34.391Z" itemprop="dateUpdated">2018-04-19 18:14:34</time>
 </span><br>
 
 
@@ -376,7 +367,7 @@
             
                 <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
             
-            <span>このブログの内容物は<a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.ja">クリエイティブ・コモンズ 表示 - 非営利 - 継承 4.0 国際ライセンスの下に提供されています</a></span>
+            <span>This blog is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</span>
         </p>
     </div>
     <div class="bottom">
