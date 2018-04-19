@@ -25,10 +25,10 @@
 <meta name="keywords" content="vue,javascript,前端">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Vue性能优化之keep-alive">
-<meta property="og:url" content="https://swordYWQ.github.com/2018/03/06/vue-keepalive/index.html">
+<meta property="og:url" content="https://swordYWQ.github.com/2018/03/06/vue/vue-keepalive/index.html">
 <meta property="og:site_name" content="雨中的YU">
 <meta property="og:description" content="在web项目中我们经常使用各种缓存在达到提高访问速度的效果，那么，在vue项目中如何使用组件缓存呢。 keep-alivekeep-alive 是vue官方提供的缓存组件。它是一个抽象组件，在页面中使用keep-alive组件缓存,能有效提高页面响应速度，组件被卸载后不会被destroy掉，而是变成不活跃状态存在内存中，当再次访问组件时直接从内存中获取缓存渲染，而不是重新请求。 场景一般使用kee">
-<meta property="og:updated_time" content="2017-12-18T06:58:39.591Z">
+<meta property="og:updated_time" content="2018-04-19T09:32:37.134Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Vue性能优化之keep-alive">
 <meta name="twitter:description" content="在web项目中我们经常使用各种缓存在达到提高访问速度的效果，那么，在vue项目中如何使用组件缓存呢。 keep-alivekeep-alive 是vue官方提供的缓存组件。它是一个抽象组件，在页面中使用keep-alive组件缓存,能有效提高页面响应速度，组件被卸载后不会被destroy掉，而是变成不活跃状态存在内存中，当再次访问组件时直接从内存中获取缓存渲染，而不是重新请求。 场景一般使用kee">
@@ -118,7 +118,7 @@
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
                 <i class="icon icon-lg icon-chevron-left"></i>
             </a>
-            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search">
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="検索">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
                 <i class="icon icon-lg icon-search"></i>
             </a>
@@ -164,7 +164,7 @@
     </aside>
 
 
-<article id="post-vue-keepalive"
+<article id="post-vue/vue-keepalive"
   class="post-article article-type-post fade" itemprop="blogPost">
 
     <div class="post-card">
@@ -199,12 +199,12 @@
     <div class="content">
         
 <span class="post-time">
-    Last updated: <time datetime="2017-12-18T06:58:39.591Z" itemprop="dateUpdated">2017-12-18 14:58:39</time>
+    最終更新：<time datetime="2018-04-19T09:32:37.134Z" itemprop="dateUpdated">2018-04-19 17:32:37</time>
 </span><br>
 
 
         
-        这里可以写作者留言，标签和 hexo 中所有变量及辅助函数等均可调用，示例：<a href="/2018/03/06/vue-keepalive/" target="_blank" rel="external">https://swordYWQ.github.com/2018/03/06/vue-keepalive/</a>
+        这里可以写作者留言，标签和 hexo 中所有变量及辅助函数等均可调用，示例：<a href="/2018/03/06/vue/vue-keepalive/" target="_blank" rel="external">https://swordYWQ.github.com/2018/03/06/vue/vue-keepalive/</a>
         
     </div>
     
@@ -235,7 +235,7 @@
 <div class="page-share" id="pageShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://swordYWQ.github.com/2018/03/06/vue-keepalive/&title=《Vue性能优化之keep-alive》 — 雨中的YU&pic=https://swordYWQ.github.com/img/avtar.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://swordYWQ.github.com/2018/03/06/vue/vue-keepalive/&title=《Vue性能优化之keep-alive》 — 雨中的YU&pic=https://swordYWQ.github.com/img/avtar.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -245,22 +245,22 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://swordYWQ.github.com/2018/03/06/vue-keepalive/&title=《Vue性能优化之keep-alive》 — 雨中的YU&source=" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://swordYWQ.github.com/2018/03/06/vue/vue-keepalive/&title=《Vue性能优化之keep-alive》 — 雨中的YU&source=" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://swordYWQ.github.com/2018/03/06/vue-keepalive/" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://swordYWQ.github.com/2018/03/06/vue/vue-keepalive/" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Vue性能优化之keep-alive》 — 雨中的YU&url=https://swordYWQ.github.com/2018/03/06/vue-keepalive/&via=https://swordYWQ.github.com" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Vue性能优化之keep-alive》 — 雨中的YU&url=https://swordYWQ.github.com/2018/03/06/vue/vue-keepalive/&via=https://swordYWQ.github.com" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://swordYWQ.github.com/2018/03/06/vue-keepalive/" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://swordYWQ.github.com/2018/03/06/vue/vue-keepalive/" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -280,7 +280,14 @@
     </div>
 
     
-<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/2018/04/19/cross-origin/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">常用的跨域解决方案</h4>
+      </a>
+    </div>
   
 
   
@@ -359,7 +366,7 @@
             
                 <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
             
-            <span>This blog is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</span>
+            <span>このブログの内容物は<a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.ja">クリエイティブ・コモンズ 表示 - 非営利 - 継承 4.0 国際ライセンスの下に提供されています</a></span>
         </p>
     </div>
     <div class="bottom">
@@ -381,7 +388,7 @@
 <div class="global-share" id="globalShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://swordYWQ.github.com/2018/03/06/vue-keepalive/&title=《Vue性能优化之keep-alive》 — 雨中的YU&pic=https://swordYWQ.github.com/img/avtar.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://swordYWQ.github.com/2018/03/06/vue/vue-keepalive/&title=《Vue性能优化之keep-alive》 — 雨中的YU&pic=https://swordYWQ.github.com/img/avtar.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -391,22 +398,22 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://swordYWQ.github.com/2018/03/06/vue-keepalive/&title=《Vue性能优化之keep-alive》 — 雨中的YU&source=" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://swordYWQ.github.com/2018/03/06/vue/vue-keepalive/&title=《Vue性能优化之keep-alive》 — 雨中的YU&source=" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://swordYWQ.github.com/2018/03/06/vue-keepalive/" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://swordYWQ.github.com/2018/03/06/vue/vue-keepalive/" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Vue性能优化之keep-alive》 — 雨中的YU&url=https://swordYWQ.github.com/2018/03/06/vue-keepalive/&via=https://swordYWQ.github.com" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Vue性能优化之keep-alive》 — 雨中的YU&url=https://swordYWQ.github.com/2018/03/06/vue/vue-keepalive/&via=https://swordYWQ.github.com" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://swordYWQ.github.com/2018/03/06/vue-keepalive/" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://swordYWQ.github.com/2018/03/06/vue/vue-keepalive/" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -417,7 +424,7 @@
 <div class="page-modal wx-share" id="wxShare">
     <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
-    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACLUlEQVR42u3aS27DMAwFwNz/0um2QGDnkZKLShqvCqdONF4Q/L1e8fX+uPL7v+9Uv3/yhYGBsSzjfXtdHevzcPdHvz9o/tQlFQMD4wDGVQRL/icJxAkjD9MYGBgYI0EwD9P334+BgYHxdMC9//7x0hcDA+NMRhI6e8G3mhQ+XotjYGAsyMi77n//9yPzDQwMjKUYvUA56/60U2FgYGzNyANcMnrMW2zJ4kX5PBgYGJsy8gdyWPLp+MtqujEwMBZk5IsO462ufC2sOkbFwMA4gVF9IEnsCqPHVrhv9gUxMDAWZFSPeP9Ub8x5XwyX1ywwMDC2Y1QbZ9XEsZpKTiiJMTAwtmaMNMWqTf8euNmGw8DAWJzRK0dnFbT5b31hY2BgbM0Yacbla/R5pE9e0ORVewwMjH/PGF9gTQrgWUXs5R0MDIytGUlIrQ4mq6lkb1RQWLbAwMA4gDG+NpEPL8eLXgwMjF0Z1UNXA2jvRSQNuGjmgIGBsQWjWtCW07VigZoPTTEwMM5hzF1grQ4dq+utl6fFwMA4gNFbd5hVpibBujzlwMDA2I4xd4NjhN1MEDEwMDZl9JYtZh0rTzSn1d8YGBgLMvKrWoI207u4ZK2+LAwMjNUZ1YZXdZ1iJComv4uBgXEOo1rE9lps42nfJRIDAwOjFUCryWI+QvgWfTEwME5n9Na/qmlf3trDwMA4h5EvdY0nhQmsHI4xMDC2ZvRCXhJARw6RjwcwMDC2ZvwAHTEsukjdpaMAAAAASUVORK5CYII=" alt="微信分享二维码">
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACMklEQVR42u3aQW7DMAwF0dz/0u62QCF7vigXETVeBU7i6GnBkBQ/H3xdf67f90evR+/y5y++ZMiQsS3jur1Gy7r/Ln8y344HqgwZMg5gjCLY6DMpIN0OvjYZMmTImAuIc4mjDBkyZKxl3Kd3/P5c6StDhowzGWnorFwE82ItLkOGjA0ZvOv+/69fOd+QIUPGVoxKoJw7VKg8bfgcGTJktGbwAFdppZFxijTgypAh4xxGGtR4MjdXaqaNvDhOy5AhY3PG/dfSAHofTOcOFYbPkSFDxgEMPu6wdpAibfN90n2SIUNGI0ZlPIsXopU0NBizkCFDRjsGWXo9mSOHAekAmQwZMk5j8LSs/jNky+rrkSFDRicGGYPgiSM5HuDBN/hFGTJktGbwA8i55n4a6UtpogwZMpoyVjXaeApYST2Hd2TIkNGasWpZ9ZYZ2b606JUhQ0YPBjkM4ItOy+BVbTsZMmT0ZqQhtd5oSwta8mQZMmScwJgbOV1b7qbhVYYMGWcy0hI0DZc8lJNjCdQ7lCFDRjtGWsry5b7RjJMhQ8bJDHKISBbNt2auxRY32mTIkLEt4wovMqLBk0gOfkhGZciQ0ZpRH7aoBMq5I9JXZkZkyJDx9YxKkK0sdzKT5UWsDBky2jHSwjVt7q9K+x5KWRkyZMgIP1MZ10CHAeQNGTJkHMkgSyfJXBpkX/zfkCFDxiYMUsSSkMob/Wnpu6zdJkOGjA0ZcyGPh8V01KwS7mXIkNGO8QM0zvoIzRYzdgAAAABJRU5ErkJggg==" alt="微信分享二维码">
 </div>
 
 
