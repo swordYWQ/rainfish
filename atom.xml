@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://swordYWQ.github.com/"/>
-  <updated>2018-05-11T02:08:15.890Z</updated>
+  <updated>2018-08-24T03:45:00.304Z</updated>
   <id>https://swordYWQ.github.com/</id>
   
   <author>
@@ -15,6 +15,63 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>ios上无法自动播放audio音乐</title>
+    <link href="https://swordYWQ.github.com/2018/08/24/ios-audio/"/>
+    <id>https://swordYWQ.github.com/2018/08/24/ios-audio/</id>
+    <published>2018-08-24T03:41:45.951Z</published>
+    <updated>2018-08-24T03:45:00.304Z</updated>
+    
+    <content type="html"><![CDATA[<hr><h1 id="ios上无法自动播放audio音乐"><a href="#ios上无法自动播放audio音乐" class="headerlink" title="ios上无法自动播放audio音乐"></a>ios上无法自动播放audio音乐</h1><p>在网页中加入音频作为背景音乐自动播放时，在ios设备中会出现无法自动播放的情况。</p><p>由于ios设备限制，用户未有页面交互时，无法自动播放音乐，因此需要手动监听touchstart事件触发播放。</p><p>如果音乐播放时手动触发的，不会出现这种情况。</p><p>在ios设备中做如下监听:</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">document.addEventListener(&quot;DOMContentLoaded&quot;, function() &#123;</span><br><span class="line">     function audioAutoPlay() &#123;</span><br><span class="line">       document.getElementById(&apos;audio&apos;).play()</span><br><span class="line">     &#125;</span><br><span class="line">     audioAutoPlay();</span><br><span class="line">   &#125;);</span><br><span class="line">   //--创建触摸监听，当浏览器打开页面时，触摸屏幕触发事件，进行音频播放</span><br><span class="line">   document.addEventListener(&quot;touchstart&quot;, function() &#123;</span><br><span class="line">     function audioAutoPlay() &#123;</span><br><span class="line">       document.getElementById(&apos;audio&apos;).play()</span><br><span class="line">     &#125;</span><br><span class="line">     audioAutoPlay();</span><br><span class="line">   &#125;);</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;hr&gt;
+&lt;h1 id=&quot;ios上无法自动播放audio音乐&quot;&gt;&lt;a href=&quot;#ios上无法自动播放audio音乐&quot; class=&quot;headerlink&quot; title=&quot;ios上无法自动播放audio音乐&quot;&gt;&lt;/a&gt;ios上无法自动播放audio音乐&lt;/h1&gt;&lt;p&gt;在网页中加
+      
+    
+    </summary>
+    
+      <category term="前端" scheme="https://swordYWQ.github.com/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="前端" scheme="https://swordYWQ.github.com/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+      <category term="移动端" scheme="https://swordYWQ.github.com/tags/%E7%A7%BB%E5%8A%A8%E7%AB%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>http参数格式转换</title>
+    <link href="https://swordYWQ.github.com/2018/08/24/http-param-format/"/>
+    <id>https://swordYWQ.github.com/2018/08/24/http-param-format/</id>
+    <published>2018-08-24T03:34:31.544Z</published>
+    <updated>2018-08-24T03:42:08.559Z</updated>
+    
+    <content type="html"><![CDATA[<hr><h1 id="http请求参数格式化"><a href="#http请求参数格式化" class="headerlink" title="http请求参数格式化"></a>http请求参数格式化</h1><p>http请求时，对参数格式有一定要求</p><p>get请求参数衔接在请求url后，使用问号(?)分隔并使用与符号(&amp;)连接多个参数</p><p>post请求中，当请求方式为formdata时，也需要转换成key=value&amp;key1=value1这样的形式</p><p>通常http库会对参数进行一定程度的封装，对get请求不需要特别处理，但post请求有时需要手动处理格式，如axios</p><p>此时我们在请求发出前的通用方法中加入如下参数转换方法，即可对参数格式进行转换。</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> (<span class="params">obj</span>) </span>&#123;</span><br><span class="line">     <span class="keyword">var</span> str = [];</span><br><span class="line">     <span class="keyword">for</span> (<span class="keyword">var</span> p <span class="keyword">in</span> obj) &#123;</span><br><span class="line">         str.push(<span class="built_in">encodeURIComponent</span>(p)<span class="string">"="</span><span class="built_in">encodeURIComponent</span>(obj[p]));</span><br><span class="line">     &#125;</span><br><span class="line">     <span class="keyword">return</span> str.join(<span class="string">"&amp;"</span>);</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;hr&gt;
+&lt;h1 id=&quot;http请求参数格式化&quot;&gt;&lt;a href=&quot;#http请求参数格式化&quot; class=&quot;headerlink&quot; title=&quot;http请求参数格式化&quot;&gt;&lt;/a&gt;http请求参数格式化&lt;/h1&gt;&lt;p&gt;http请求时，对参数格式有一定要求&lt;/p&gt;
+&lt;p&gt;get
+      
+    
+    </summary>
+    
+      <category term="前端" scheme="https://swordYWQ.github.com/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="前端" scheme="https://swordYWQ.github.com/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+      <category term="http" scheme="https://swordYWQ.github.com/tags/http/"/>
+    
+  </entry>
   
   <entry>
     <title>js判断数据类型的方法</title>
@@ -133,9 +190,9 @@
     <link href="https://swordYWQ.github.com/2018/03/06/vue/vue-keepalive/"/>
     <id>https://swordYWQ.github.com/2018/03/06/vue/vue-keepalive/</id>
     <published>2018-03-06T06:26:19.166Z</published>
-    <updated>2018-05-11T07:59:24.474Z</updated>
+    <updated>2018-08-24T03:50:45.778Z</updated>
     
-    <content type="html"><![CDATA[<p>在web项目中我们经常使用各种缓存在达到提高访问速度的效果，那么，在vue项目中如何使用组件缓存呢。</p><h2 id="keep-alive"><a href="#keep-alive" class="headerlink" title="keep-alive"></a>keep-alive</h2><p>keep-alive 是vue官方提供的缓存组件。它是一个抽象组件，在页面中使用keep-alive组件缓存,能有效提高页面响应速度，组件被卸载后不会被destroy掉，而是变成不活跃状态存在内存中，当再次访问组件时直接从内存中获取缓存渲染，而不是重新请求。</p><h3 id="场景"><a href="#场景" class="headerlink" title="场景"></a>场景</h3><p>一般使用keep-alive的场景为router-view路由组件或者component动态组件。</p><h3 id="使用方式"><a href="#使用方式" class="headerlink" title="使用方式"></a>使用方式</h3><p>1 只用单独的keep-alive包裹的话，会缓存router-view 渲染的所有组件<br>2 使用include绑定一个数组，只会缓存数组中name相同的组件<br>3 使用exclude绑定一个数组，会缓存除了数组中name相同的其他所有渲染的组件</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;keep-alive :include=<span class="string">"cachePages"</span> :exclude=<span class="string">"excludePages"</span>&gt;</span><br><span class="line">  &lt;router-view&gt;&lt;/router-view&gt;</span><br><span class="line">&lt;/keep-alive&gt;</span><br></pre></td></tr></table></figure><h3 id="缺陷"><a href="#缺陷" class="headerlink" title="缺陷"></a>缺陷</h3><p>能够实现打开后的组件进行缓存，但关闭标签页后，重新打开组件，组件仍是缓存后的组件，无法实现从内存中移除已缓存的组件。</p>]]></content>
+    <content type="html"><![CDATA[<p>在web项目中我们经常使用各种缓存在达到提高访问速度的效果，那么，在vue项目中如何使用组件缓存呢。</p><h2 id="keep-alive"><a href="#keep-alive" class="headerlink" title="keep-alive"></a>keep-alive</h2><p>keep-alive 是vue官方提供的缓存组件。它是一个抽象组件，在页面中使用keep-alive组件缓存,能有效提高页面响应速度，组件被卸载后不会被destroy掉，而是变成不活跃状态存在内存中，当再次访问组件时直接从内存中获取缓存渲染，而不是重新请求。</p><h3 id="场景"><a href="#场景" class="headerlink" title="场景"></a>场景</h3><p>一般使用keep-alive的场景为router-view路由组件或者component动态组件。</p><h3 id="使用方式"><a href="#使用方式" class="headerlink" title="使用方式"></a>使用方式</h3><p>1 只用单独的keep-alive包裹的话，会缓存router-view 渲染的所有组件<br>2 使用include绑定一个数组，只会缓存数组中name相同的组件<br>3 使用exclude绑定一个数组，会缓存除了数组中name相同的其他所有渲染的组件</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;keep-alive :include=<span class="string">"cachePages"</span> :exclude=<span class="string">"excludePages"</span>&gt;</span><br><span class="line">  &lt;router-view&gt;&lt;/router-view&gt;</span><br><span class="line">&lt;/keep-alive&gt;</span><br></pre></td></tr></table></figure><h3 id="缺陷"><a href="#缺陷" class="headerlink" title="缺陷"></a>缺陷</h3><p>能够实现打开后的组件进行缓存，但关闭标签页后，重新打开组件，组件仍是缓存后的组件，无法实现从内存中移除已缓存的组件。</p><h3 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h3><p>经过项目中的测试，发现如果需要比较正常开发多标签页的网站应用，比较适合的方法是使用component组件，组件由component渲染，使用一个数组对组件名进行保存，通过循环生成组件。这种方式能比较方便地实现度标签项目，但缺点是组件打开过多时会造成内存占用过多，因此最好对页面数量进行限制。</p>]]></content>
     
     <summary type="html">
     

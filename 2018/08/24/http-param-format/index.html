@@ -14,25 +14,25 @@
     
     
     
-    <title>vue路由懒加载 | 雨中的YU</title>
+    <title>http参数格式转换 | 雨中的YU</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
     <meta name="theme-color" content="#3F51B5">
     
     
-    <meta name="keywords" content="vue,前端">
-    <meta name="description" content="webpack打包后体积过大我们知道，vue-cli项目默认使用webpack进行打包，打包的时候，会把所有的css,js,vue文件打包成js，页面比较多的时候，最后会生成一个比较大的js文件。 这样的话，在网站进入的时候，需要等待这个大文件下载完成才能进入页面。 解决方法这时我们就可以考虑路由懒加载了，路由懒加载是通过异步加载路由组件，打包后会为每一个组件生成一个js文件，切换路由的时候才会加">
-<meta name="keywords" content="vue,前端">
+    <meta name="keywords" content="前端,http">
+    <meta name="description" content="http请求参数格式化http请求时，对参数格式有一定要求 get请求参数衔接在请求url后，使用问号(?)分隔并使用与符号(&amp;amp;)连接多个参数 post请求中，当请求方式为formdata时，也需要转换成key=value&amp;amp;key1=value1这样的形式 通常http库会对参数进行一定程度的封装，对get请求不需要特别处理，但post请求有时需要手动处理格式，如axios 此时">
+<meta name="keywords" content="前端,http">
 <meta property="og:type" content="article">
-<meta property="og:title" content="vue路由懒加载">
-<meta property="og:url" content="https://swordYWQ.github.com/2018/05/09/vue/vue-router-lazy/index.html">
+<meta property="og:title" content="http参数格式转换">
+<meta property="og:url" content="https://swordYWQ.github.com/2018/08/24/http-param-format/index.html">
 <meta property="og:site_name" content="雨中的YU">
-<meta property="og:description" content="webpack打包后体积过大我们知道，vue-cli项目默认使用webpack进行打包，打包的时候，会把所有的css,js,vue文件打包成js，页面比较多的时候，最后会生成一个比较大的js文件。 这样的话，在网站进入的时候，需要等待这个大文件下载完成才能进入页面。 解决方法这时我们就可以考虑路由懒加载了，路由懒加载是通过异步加载路由组件，打包后会为每一个组件生成一个js文件，切换路由的时候才会加">
+<meta property="og:description" content="http请求参数格式化http请求时，对参数格式有一定要求 get请求参数衔接在请求url后，使用问号(?)分隔并使用与符号(&amp;amp;)连接多个参数 post请求中，当请求方式为formdata时，也需要转换成key=value&amp;amp;key1=value1这样的形式 通常http库会对参数进行一定程度的封装，对get请求不需要特别处理，但post请求有时需要手动处理格式，如axios 此时">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-05-11T07:59:28.552Z">
+<meta property="og:updated_time" content="2018-08-24T03:42:08.559Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="vue路由懒加载">
-<meta name="twitter:description" content="webpack打包后体积过大我们知道，vue-cli项目默认使用webpack进行打包，打包的时候，会把所有的css,js,vue文件打包成js，页面比较多的时候，最后会生成一个比较大的js文件。 这样的话，在网站进入的时候，需要等待这个大文件下载完成才能进入页面。 解决方法这时我们就可以考虑路由懒加载了，路由懒加载是通过异步加载路由组件，打包后会为每一个组件生成一个js文件，切换路由的时候才会加">
+<meta name="twitter:title" content="http参数格式转换">
+<meta name="twitter:description" content="http请求参数格式化http请求时，对参数格式有一定要求 get请求参数衔接在请求url后，使用问号(?)分隔并使用与符号(&amp;amp;)连接多个参数 post请求中，当请求方式为formdata时，也需要转换成key=value&amp;amp;key1=value1这样的形式 通常http库会对参数进行一定程度的封装，对get请求不需要特别处理，但post请求有时需要手动处理格式，如axios 此时">
     
         <link rel="alternate" type="application/atom+xml" title="雨中的YU" href="/atom.xml">
     
@@ -113,7 +113,7 @@
         <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
           <i class="icon icon-lg icon-navicon"></i>
         </a>
-        <div class="flex-col header-title ellipsis">vue路由懒加载</div>
+        <div class="flex-col header-title ellipsis">http参数格式转换</div>
         
         <div class="search-wrap" id="search-wrap">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
@@ -135,11 +135,11 @@
 <header class="content-header post-header">
 
     <div class="container fade-scale">
-        <h1 class="title">vue路由懒加载</h1>
+        <h1 class="title">http参数格式转换</h1>
         <h5 class="subtitle">
             
-                <time datetime="2018-05-09T03:28:10.499Z" itemprop="datePublished" class="page-time">
-  2018-05-09
+                <time datetime="2018-08-24T03:34:31.544Z" itemprop="datePublished" class="page-time">
+  2018-08-24
 </time>
 
 
@@ -160,18 +160,18 @@
     <aside class="post-widget">
         <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
             <h4>TOC</h4>
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#webpack打包后体积过大"><span class="post-toc-number">1.</span> <span class="post-toc-text">webpack打包后体积过大</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#解决方法"><span class="post-toc-number">2.</span> <span class="post-toc-text">解决方法</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#使用方法"><span class="post-toc-number">3.</span> <span class="post-toc-text">使用方法</span></a></li></ol>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#http请求参数格式化"><span class="post-toc-number">1.</span> <span class="post-toc-text">http请求参数格式化</span></a></li></ol>
         </nav>
     </aside>
 
 
-<article id="post-vue/vue-router-lazy"
+<article id="post-http-param-format"
   class="post-article article-type-post fade" itemprop="blogPost">
 
     <div class="post-card">
-        <h1 class="post-card-title">vue路由懒加载</h1>
+        <h1 class="post-card-title">http参数格式转换</h1>
         <div class="post-meta">
-            <time class="post-time" title="2018-05-09 11:28:10" datetime="2018-05-09T03:28:10.499Z"  itemprop="datePublished">2018-05-09</time>
+            <time class="post-time" title="2018-08-24 11:34:31" datetime="2018-08-24T03:34:31.544Z"  itemprop="datePublished">2018-08-24</time>
 
             
 	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/前端/">前端</a></li></ul>
@@ -186,12 +186,13 @@
 
         </div>
         <div class="post-content" id="post-content" itemprop="postContent">
-            <h2 id="webpack打包后体积过大"><a href="#webpack打包后体积过大" class="headerlink" title="webpack打包后体积过大"></a>webpack打包后体积过大</h2><p>我们知道，vue-cli项目默认使用webpack进行打包，打包的时候，会把所有的css,js,vue文件打包成js，页面比较多的时候，最后会生成一个比较大的js文件。</p>
-<p>这样的话，在网站进入的时候，需要等待这个大文件下载完成才能进入页面。</p>
-<h2 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h2><p>这时我们就可以考虑路由懒加载了，路由懒加载是通过异步加载路由组件，打包后会为每一个组件生成一个js文件，切换路由的时候才会加载该js，减少公用js体积，加快首页渲染速度。</p>
-<h2 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h2><p>在配置路由组件的时候，把默认的配置修改一下</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> Login <span class="keyword">from</span> <span class="string">'@/login.vue'</span></span><br><span class="line">&#123;</span><br><span class="line">  path:<span class="string">'/login'</span>,</span><br><span class="line">  name:<span class="string">'login'</span>,</span><br><span class="line">  component: Login</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>修改为<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  path:<span class="string">'/login'</span>,</span><br><span class="line">  name:<span class="string">'login'</span>,</span><br><span class="line">  component:<span class="function">(<span class="params">resolve</span>) =&gt;</span> <span class="built_in">require</span>(<span class="string">'***/login.vue'</span>,resolve)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+            <hr>
+<h1 id="http请求参数格式化"><a href="#http请求参数格式化" class="headerlink" title="http请求参数格式化"></a>http请求参数格式化</h1><p>http请求时，对参数格式有一定要求</p>
+<p>get请求参数衔接在请求url后，使用问号(?)分隔并使用与符号(&amp;)连接多个参数</p>
+<p>post请求中，当请求方式为formdata时，也需要转换成key=value&amp;key1=value1这样的形式</p>
+<p>通常http库会对参数进行一定程度的封装，对get请求不需要特别处理，但post请求有时需要手动处理格式，如axios</p>
+<p>此时我们在请求发出前的通用方法中加入如下参数转换方法，即可对参数格式进行转换。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> (<span class="params">obj</span>) </span>&#123;</span><br><span class="line">     <span class="keyword">var</span> str = [];</span><br><span class="line">     <span class="keyword">for</span> (<span class="keyword">var</span> p <span class="keyword">in</span> obj) &#123;</span><br><span class="line">         str.push(<span class="built_in">encodeURIComponent</span>(p)<span class="string">"="</span><span class="built_in">encodeURIComponent</span>(obj[p]));</span><br><span class="line">     &#125;</span><br><span class="line">     <span class="keyword">return</span> str.join(<span class="string">"&amp;"</span>);</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
 
         </div>
 
@@ -200,12 +201,12 @@
     <div class="content">
         
 <span class="post-time">
-    Last updated: <time datetime="2018-05-11T07:59:28.552Z" itemprop="dateUpdated">2018-05-11 15:59:28</time>
+    Last updated: <time datetime="2018-08-24T03:42:08.559Z" itemprop="dateUpdated">2018-08-24 11:42:08</time>
 </span><br>
 
 
         
-        这里可以写作者留言，标签和 hexo 中所有变量及辅助函数等均可调用，示例：<a href="/2018/05/09/vue/vue-router-lazy/" target="_blank" rel="external">https://swordYWQ.github.com/2018/05/09/vue/vue-router-lazy/</a>
+        这里可以写作者留言，标签和 hexo 中所有变量及辅助函数等均可调用，示例：<a href="/2018/08/24/http-param-format/" target="_blank" rel="external">https://swordYWQ.github.com/2018/08/24/http-param-format/</a>
         
     </div>
     
@@ -226,7 +227,7 @@
 
         <div class="post-footer">
             
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vue/">vue</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li></ul>
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/http/">http</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li></ul>
 
 
             
@@ -236,7 +237,7 @@
 <div class="page-share" id="pageShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://swordYWQ.github.com/2018/05/09/vue/vue-router-lazy/&title=《vue路由懒加载》 — 雨中的YU&pic=https://swordYWQ.github.com/img/avtar.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://swordYWQ.github.com/2018/08/24/http-param-format/&title=《http参数格式转换》 — 雨中的YU&pic=https://swordYWQ.github.com/img/avtar.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -246,22 +247,22 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://swordYWQ.github.com/2018/05/09/vue/vue-router-lazy/&title=《vue路由懒加载》 — 雨中的YU&source=" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://swordYWQ.github.com/2018/08/24/http-param-format/&title=《http参数格式转换》 — 雨中的YU&source=" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://swordYWQ.github.com/2018/05/09/vue/vue-router-lazy/" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://swordYWQ.github.com/2018/08/24/http-param-format/" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《vue路由懒加载》 — 雨中的YU&url=https://swordYWQ.github.com/2018/05/09/vue/vue-router-lazy/&via=https://swordYWQ.github.com" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《http参数格式转换》 — 雨中的YU&url=https://swordYWQ.github.com/2018/08/24/http-param-format/&via=https://swordYWQ.github.com" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://swordYWQ.github.com/2018/05/09/vue/vue-router-lazy/" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://swordYWQ.github.com/2018/08/24/http-param-format/" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -284,18 +285,18 @@
 <nav class="post-nav flex-row flex-justify-between">
   
     <div class="waves-block waves-effect prev">
-      <a href="/2018/05/10/optimization-pic/" id="post-prev" class="post-nav-link">
+      <a href="/2018/08/24/ios-audio/" id="post-prev" class="post-nav-link">
         <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
-        <h4 class="title">将图片以base64形式嵌入html中提升渲染速度</h4>
+        <h4 class="title">ios上无法自动播放audio音乐</h4>
       </a>
     </div>
   
 
   
     <div class="waves-block waves-effect next">
-      <a href="/2018/04/19/cross-origin/" id="post-next" class="post-nav-link">
+      <a href="/2018/05/11/js/js-type/" id="post-next" class="post-nav-link">
         <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
-        <h4 class="title">常用的跨域解决方案</h4>
+        <h4 class="title">js判断数据类型的方法</h4>
       </a>
     </div>
   
@@ -389,7 +390,7 @@
 <div class="global-share" id="globalShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://swordYWQ.github.com/2018/05/09/vue/vue-router-lazy/&title=《vue路由懒加载》 — 雨中的YU&pic=https://swordYWQ.github.com/img/avtar.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://swordYWQ.github.com/2018/08/24/http-param-format/&title=《http参数格式转换》 — 雨中的YU&pic=https://swordYWQ.github.com/img/avtar.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -399,22 +400,22 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://swordYWQ.github.com/2018/05/09/vue/vue-router-lazy/&title=《vue路由懒加载》 — 雨中的YU&source=" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://swordYWQ.github.com/2018/08/24/http-param-format/&title=《http参数格式转换》 — 雨中的YU&source=" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://swordYWQ.github.com/2018/05/09/vue/vue-router-lazy/" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://swordYWQ.github.com/2018/08/24/http-param-format/" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《vue路由懒加载》 — 雨中的YU&url=https://swordYWQ.github.com/2018/05/09/vue/vue-router-lazy/&via=https://swordYWQ.github.com" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《http参数格式转换》 — 雨中的YU&url=https://swordYWQ.github.com/2018/08/24/http-param-format/&via=https://swordYWQ.github.com" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://swordYWQ.github.com/2018/05/09/vue/vue-router-lazy/" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://swordYWQ.github.com/2018/08/24/http-param-format/" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -425,7 +426,7 @@
 <div class="page-modal wx-share" id="wxShare">
     <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
-    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACKklEQVR42u3aS27CUAwF0O5/06nUUSVEuLbTSnFORoiS8k4Gxr+vr/g6fq7Xd35fr+/nnz+/97ILAwPjtozj9Jp/pvfX/HsxMDCewzgPsudBcBI0z+9NzoaBgYHRS+zyA50/MgwMDIwe411amRyilxpiYGBg5AVq3uPKkfPiGQMD4wmMXqn5P6//cL6BgYFxE8Yxvs7TxEmBWjgDBgbGakbeVpsXpXk5Wk0xMTAwdjMmYXQ+BO21+QpVOAYGxgpG3uJPSNUhQR7EC2UtBgbGOsZkhaJ6rEkILg8vMTAwljKqNyfsvA2Xr3R86BpiYGCsZlRTtOpixKQ8Lm+LYGBgrGNUm2i9Q+RFbzkBxcDAeBgjSQHzQWZeKufraG9TQwwMjKWM+UGrr8uHyx8EBgbGUsakcK0uWBSmqXH62JyCYmBg3JYxHw/0QnBvhBA9OQwMjKWMaoGaJ3C9Vlp0HgwMjNWMXsssX7DIR5vVe6MVMQwMjBWMSapXfVrV77qgFsfAwFjBqFaC1bWt6vAyX/7AwMB4DqOX8E141bFBVPpiYGCsZlRXsvIQeUG7/6JhBgYGxt0ZR/HqNet7y16FcI+BgbGa0Qtz1VCbL3s1fxkwMDAewMiDbBIEq+Be+P7QdMPAwFjKmBSi+SpYctAkoka/CRgYGBjjJHIyzsTAwMC4tibuLZPlbTsMDIznMCb/upfM5cVqgsfAwNjNmOdd+TLZfL11NMjEwMC4H+MbQvod83LU2JMAAAAASUVORK5CYII=" alt="微信分享二维码">
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACKUlEQVR42u3a0W7jMAwEwP7/T6evBxTO7VJxUUujpyBIbI4DMBSpr694vX6sf9+/en31rfz6H14YGBiPZbzerp+fab91da/37+R3wcDAOIdxlcGSgBJk+zjy2DAwMDDa18knk8SKgYGBcR8juuWoTMTAwMDIS7S8HEw2n22J+YG9OAYGxgMZedf991/fMt/AwMB4FONVrpUxZzvCLKLCwMDYmpEnuNkxi3zMkGx638eDgYFxAqM9ctEeqmhrvBaGgYGxK+P9zfIG/azsW4nhssLFwMDYjrGScJNjE+/TdNvmu+V/AwMD488z2kDzzedsVNkeAcHAwDiBMbt9O+xcT7LRdTAwMLZmtKRZu79t2C214TAwMDZitAdM7ygo83Ze1DXEwMDYjtGGNRtktuEORxEYGBhbM1aKtmT7OrvC7HFgYGDszchTcHvR5MBEwq4beRgYGBsxkg3qSmrOh5d5msbAwDiH0abU/EBYHm77z1D8DhgYGFsw8kFj3kprj3Otp2wMDIwTGLOKcvb52Yg0arphYGAcwFhpgeXb4NlgMoJhYGAcxmgHjclmON/u5gVrXWNiYGA8kPEqV769/FQRGV0HAwNja0a+VsKdte3ygxoYGBgnMNoQ2/KxfWbtkQsMDIxzGHkonzoqMaP+ZyuLgYGBMSr7Zpi8lMTAwMBok29ezLVJ9pb/DQwMjEcxkk1s3iyLbrzwgDAwME5jzFLefUHkzT4MDIwDGN+NcpNhC3MqpwAAAABJRU5ErkJggg==" alt="微信分享二维码">
 </div>
 
 
